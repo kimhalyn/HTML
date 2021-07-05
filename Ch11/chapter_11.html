@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Grid System</title>
+    <style>
+        /* Grid System
+           - CSS로 레이아웃을 미리 잡고 만들어 두는 법 
+           - 일반적으로 12개로 많이 만듦(12가 약수가 가장 많기 때문에 화면을 원활하게 자르기 쉬움) 
+           - width는 일반적으로 960px, 1200px, 1140px 사용(12의 배수라서)
+        */
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .row {overflow: hidden;}
+        .span {float: left;}
+        .span_1 {width: 80px;} /* 960/12 */
+        .span_2 {width: 160px;}
+        .span_3 {width: 240px;}
+        .span_4 {width: 320px;}
+        .span_5 {width: 400px;}
+        .span_6 {width: 480px;}
+        .span_7 {width: 560px;}
+        .span_8 {width: 640px;}
+        .span_9 {width: 720px;}
+        .span_10 {width: 800px;}
+        .span_11 {width: 880px;}
+        .span_12 {width: 960px;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span span_12">
+                <h1>Lorem Ipsum</h1>
+                <p>Esse ipsum consectetur adipisicing occaecat ut. Pariatur irure exercitation incididunt consectetur nisi est et irure. Qui culpa sint sint dolor cillum occaecat dolor est ad.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span span_4">
+                <h1>Lorem Ipsum</h1>
+                <p>Esse ipsum consectetur adipisicing occaecat ut. Pariatur irure exercitation incididunt consectetur nisi est et irure. Qui culpa sint sint dolor cillum occaecat dolor est ad.</p>
+            </div>
+            <div class="span span_8">
+                <h1>Lorem Ipsum</h1>
+                <p>Esse ipsum consectetur adipisicing occaecat ut. Pariatur irure exercitation incididunt consectetur nisi est et irure. Qui culpa sint sint dolor cillum occaecat dolor est ad.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span span_1">
+                <h1>Lorem Ipsum</h1>
+                <p>Esse ipsum consectetur adipisicing occaecat ut. Pariatur irure exercitation incididunt consectetur nisi est et irure. Qui culpa sint sint dolor cillum occaecat dolor est ad.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
