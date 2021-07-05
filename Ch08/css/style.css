@@ -1,0 +1,179 @@
+/* 초기화 */ 
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px 'Dotum';
+}
+a {text-decoration: none;}
+ul {list-style: none;}
+/* img 태그에 a 태그가 입혀질 경우, 자동으로 img 태그 주변에 border가 생김. 이를 없어주기 위함 */ 
+img {border: 0;}
+body {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 헤더 영역 */
+#main_header {
+    position: relative;
+    height: 75px;
+}
+#main_header > h1.logo {
+    position: absolute;
+    padding-right: 200px;
+    left: 15px;
+    top: 10px;
+}
+#main_header > div.login_menu {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+/* 사이드 영역 */
+#global_aside {
+    position: absolute;
+    left: 990px;
+    top: 75px;
+    width: 90px;
+}
+#global_aside > a {
+    display: block;   /* margin 속성을 사용하기 위해, display:block 설정 */
+    margin-bottom: 5px;
+}
+
+/* 네이게이션(1) */
+#top_gnb {
+    overflow: hidden; /* 자손에 float 속성 적용 -> 부모에 overflow:hidden 적용해야 함 */
+}
+#top_gnb > div.menu {
+    float: left;
+    width: 140px; /* body width:980px / 7 = 140px */
+    height: 50px;
+    background-image: url('../img/top_gnb.png');
+}
+/* background-position: 배경이미지 위치를 어떤 좌표(x, y)로부터 시작할지 지정 */
+#top_gnb > div.item1 {background-position: 0 0;} 
+#top_gnb > div.item2 {background-position: 0 -50px;}
+#top_gnb > div.item3 {background-position: 0 -100px;}
+#top_gnb > div.item4 {background-position: 0 -150px;}
+#top_gnb > div.item5 {background-position: 0 -200px;}
+#top_gnb > div.item6 {background-position: 0 -250px;}
+#top_gnb > div.item7 {background-position: 0 -300px;}
+
+#top_gnb > div.item1:hover {background-position: 0 -350px;}
+#top_gnb > div.item2:hover {background-position: 0 -400px;}
+#top_gnb > div.item3:hover {background-position: 0 -450px;}
+#top_gnb > div.item4:hover {background-position: 0 -500px;}
+#top_gnb > div.item5:hover {background-position: 0 -550px;}
+#top_gnb > div.item6:hover {background-position: 0 -600px;}
+#top_gnb > div.item7:hover {background-position: 0 -650px;}
+
+#top_gnb > div.item1.active {background-position: 0 -350px;}
+#top_gnb > div.item2.active {background-position: 0 -400px;}
+#top_gnb > div.item3.active {background-position: 0 -450px;}
+#top_gnb > div.item4.active {background-position: 0 -500px;}
+#top_gnb > div.item5.active {background-position: 0 -550px;}
+#top_gnb > div.item6.active {background-position: 0 -600px;}
+#top_gnb > div.item7.active {background-position: 0 -650px;}
+
+/* 네이게이션(2) */
+#bottom_gnb {
+    overflow: hidden; /* 자손에 float 속성 적용 -> 부모에 overflow:hidden 적용해야 함 */
+}
+#bottom_gnb > div.menu {
+    float: left;
+    width: 98px; /* body width:980px / 10 = 98px */
+    height: 80px; 
+    background: url(../img/bottom_gnb.png);
+}
+#bottom_gnb > div.item1 {background-position: 0 0;}
+#bottom_gnb > div.item2 {background-position: 0 -80px;}
+#bottom_gnb > div.item3 {background-position: 0 -160px;}
+#bottom_gnb > div.item4 {background-position: 0 -240px;}
+#bottom_gnb > div.item5 {background-position: 0 -320px;}
+#bottom_gnb > div.item6 {background-position: 0 -400px;}
+#bottom_gnb > div.item7 {background-position: 0 -480px;}
+#bottom_gnb > div.item8 {background-position: 0 -560px;}
+#bottom_gnb > div.item9 {background-position: 0 -640px;}
+#bottom_gnb > div.item10 {background-position: 0 -720px;}
+
+#bottom_gnb > div.item1:hover {background-position: 0 -800px;}
+#bottom_gnb > div.item2:hover {background-position: 0 -880px;}
+#bottom_gnb > div.item3:hover {background-position: 0 -960px;}
+#bottom_gnb > div.item4:hover {background-position: 0 -1040px;}
+#bottom_gnb > div.item5:hover {background-position: 0 -1120px;}
+#bottom_gnb > div.item6:hover {background-position: 0 -1200px;}
+#bottom_gnb > div.item7:hover {background-position: 0 -1280px;}
+#bottom_gnb > div.item8:hover {background-position: 0 -1360px;}
+#bottom_gnb > div.item9:hover {background-position: 0 -1440px;}
+#bottom_gnb > div.item10:hover {background-position: 0 -1520px;}
+
+#bottom_gnb > div.item1.active {background-position: 0 -800px;}
+#bottom_gnb > div.item2.active {background-position: 0 -880px;}
+#bottom_gnb > div.item3.active {background-position: 0 -960px;}
+#bottom_gnb > div.item4.active {background-position: 0 -1040px;}
+#bottom_gnb > div.item5.active {background-position: 0 -1120px;}
+#bottom_gnb > div.item6.active {background-position: 0 -1200px;}
+#bottom_gnb > div.item7.active {background-position: 0 -1280px;}
+#bottom_gnb > div.item8.active {background-position: 0 -1360px;}
+#bottom_gnb > div.item9.active {background-position: 0 -1440px;}
+#bottom_gnb > div.item10.active {background-position: 0 -1520px;}
+
+/* 목록 */
+#detail_list {
+    overflow: hidden; /* 자손에 float속성을 적용하기 위해 사용 */
+    padding: 10px;
+    background: #3b414d;
+}
+#detail_list > ul {
+    float: left;
+    width: 192px; /* body width:(980px - padding:(10px*2)) / 5 */
+}
+#detail_list > ul > li {
+    height: 13px;
+    margin-top: 5px;
+    padding: 3px 5px;
+    color: #f3f3f3;
+    white-space: nowrap; /* 줄바꿈없이 넘친 그대로 내용 다 표시 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 넘친 글자를 (...)으로 표시 */
+}
+#detail_list > ul > li.header {padding-left: 15px;}
+#detail_list > ul > li p {
+    font-weight: bold;
+    color: #48c5ff;
+}
+
+/* 본문 */
+#content {margin-top: 10px;}
+#product_section {
+    overflow: hidden;
+    margin-top: 5px;
+}
+#product_article {
+    float: left;
+    width: 795px;
+}
+#product_article img {display: block;} /* inline태그 -> display:block 지정하여 img태그의 공간을 없앰, img공간을 꽉 채움 */
+#product_aside {
+    float: right;
+    margin-bottom: 5px;
+    width: 170px;
+}
+
+/* 푸터 */
+#main_footer {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    background: #9c9c9c;
+}
+#main_footer h1 {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
