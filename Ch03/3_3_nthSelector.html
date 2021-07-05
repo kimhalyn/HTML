@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 구조선택자</title>
+    <style>
+        /* 구조선택자
+        x:first-child 첫 번째에 위치하는 태그
+        x:last-child 마지막에 위치하는 태그 
+        x:nth-child(n) 부모의 모든 자식들 중에 n번째
+        x:nth-of-type(n) 부모의 특정 자식(x) 중에 n번째
+         */
+
+        /* 서울 선택 */
+        ul:nth-child(2) > li:first-child {
+            color: blue;
+        }
+
+        /* 대전 선택 */
+        ul:nth-of-type(1) > li:nth-child(2) {
+            color: green;
+        }
+
+        /* 광주 선택 */
+        ul:nth-of-type(1) > li:last-child {
+            color: orange;
+        }
+
+        /* 한국 선택 */
+        ul:nth-child(3) > li:first-child {
+            color: green;
+        }
+
+        /* 미국 선택 */
+        ul:nth-of-type(2) > li:nth-child(2) {
+            color: orange;
+        }
+
+        /* 일본 선택 */
+        ul:nth-of-type(2) > li:nth-of-type(4) {
+            color: yellow;
+        }
+        
+        /* 독일 선택 */
+        ul:nth-of-type(2) > li:last-child {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>3.구조선택자</h3>
+
+    <ul>
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+    <ul>
+        <li>한국</li>
+        <li>미국</li>
+        <li>중국</li>
+        <li>일본</li>
+        <li>독일</li>
+    </ul>    
+</body>
+</html> 

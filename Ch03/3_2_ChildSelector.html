@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 자식선택자</title>
+    <style>
+        /* - 자식선택자: 바로 한 단계 아래에 위치한 태그 
+           - '>'로 표기
+           - table 선택자는 자식선택자를 하면 tbody가 자동으로 생성됨(요소검사) 
+             -> table은 자식선택자 사용 x */
+        body > h3 {
+            color: orange;
+        }
+
+        section > h3 {
+            color: #0000ff;
+        }
+
+        .s1 > em {
+            color: gray;
+        }
+
+        .s2 > em {
+            color: green;
+        }
+
+        tr > th {
+            color: red;                
+        }
+
+
+        /* - 후손선택자: 아래에 위치한 모든 태그 
+           - '공백'으로 표기
+        */
+        section strong {
+            color: rgb(0, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h3>2.CSS 자식선택자</h3>
+
+    <section>
+        <h3>애국가</h3>
+        <p class="s1">
+            동해물과 백두산이 마르고 닳도록<br/>
+            하느님이 보우하사 우리나라 만세<br/>
+            <em>
+                무궁화 삼천리 화려강산<br/>
+                <strong>대한사람</strong> 대한으로 길이보전하세.
+            </em>
+        </p>
+        <p class="s2">
+            남산위에 저 소나무 철갑을 두른듯<br/>
+            하느님이 보우하사 우리나라 만세<br/>
+            <em>
+                무궁화 삼천리 화려강산<br/>
+                <strong>대한사람</strong> 대한으로 길이보전하세.
+            </em>
+        </p>
+    </section>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울</td>
+        </tr>
+    </table>
+</body>
+</html> 

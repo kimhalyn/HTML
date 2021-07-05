@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 선택자</title>
+    <style>
+        /* 전체 선택자: html, head, title, style, body태그 전부 다 선택 */
+        * {
+            color: blue;
+        }
+
+        /* 태그 선택자: 태그, 속성, 속성값 */
+        h3 {
+            color: orange;
+        }
+
+        h4 {
+            color: green;
+        }
+
+        /* 클래스 선택자 '.' */
+        .tit {
+            color: cyan;
+        }
+
+        /* 아이디 선택자 '#' */
+        #tit1 {
+            color: magenta;
+        }
+
+        #tit2 {
+            color: yellow;
+        }
+
+        /* 여러개 선택자 적용 -> 쉼표로 연결 */
+        h1, h2{
+            color: red;
+        }
+        .a {
+            background: black;
+        }
+        .a.b.c {
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h3>1.CSS 선택자</h3>
+
+    <h4>Hello, 안녕</h4>
+    <h4 class="tit">Hello, 안녕</h4>
+    <h4 class="tit">Hello, 안녕</h4>
+    <h4 id="tit1">Hello, 안녕</h4>
+    <h4 id="tit2">Hello, 안녕</h4>
+    <h1>선택1</h1>
+    <h2>선택2</h2>
+    <!-- 클래스 선택자를 여러 개 지정할 때 띄어쓰기로 구분  -->
+    <h5 class="a b c">클래스 선택자 </h5>
+</body>
+</html> 

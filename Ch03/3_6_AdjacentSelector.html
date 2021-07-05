@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 동위선택자</title>
+    <style>
+        /* '+': 자기 태그 바로 뒤에 오는 해당 태그 선택 */
+        h2 + h1 {color: red;}
+        
+        /* '~': 자기 태그 뒤에 오는 해당 태그 전부 선택 */
+        h1 ~ h2 {color: blue;}
+
+        /* tab구현 */
+        input:nth-of-type(1) ~ div:nth-of-type(2) {
+            display: none;  /* 가나다라 삭제 */
+        }
+        input:nth-of-type(2) ~ div:nth-of-type(3) {
+            display: none; /* 마바사아 삭제 */
+        }
+        input:nth-of-type(1):checked ~ div:nth-of-type(2) {
+            display: block; /* tab-1 클릭했을 때 가나다라 부활 */
+        }
+        input:nth-of-type(2):checked ~ div:nth-of-type(3) {
+            display: block; /* tab-2 클릭했을 때 마바사아 부활 */
+        }
+        /* radio버튼 없이 label만 작동 */
+        input {display: none;}
+         
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Lorem Ipsum</h2>
+        <h1>Lorem Ipsum</h1>
+        <h2>Lorem Ipsum</h2>
+        <h2>Lorem Ipsum</h2>
+        <h2>Lorem Ipsum</h2>
+        <h2>Lorem Ipsum</h2>
+    </div>
+    <!-- label태그 for에 input태그 id를 동일하게 지정하면 ->
+         2개 태그를 서로 연결할 수 있음   
+    -->
+    <label for="tab-1">TAB1</label>
+    <label for="tab-2">TAB2</label>
+    <input type="radio" name="tab" id="tab-1" checked="checked">
+    <input type="radio" name="tab" id="tab-2">
+    <div class="tab_item">가나다라</div>
+    <div class="tab_item">마바사아</div>
+    <div class="tab_item">자차카타</div>
+</body>
+</html>

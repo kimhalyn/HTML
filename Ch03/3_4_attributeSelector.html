@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 속성선택자</title>
+    <style>
+        /* 속성선택자 */
+        input[name=uid] {
+            width: 150px;
+            height: 20px;
+        }
+
+        input[name=password] {
+            background: yellow;
+        }
+
+        input[type=submit] {
+            color:#fff;
+            background: #111;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>4.CSS 속성선택자</h3>
+
+    <form action="#">
+        <h4>로그인</h4>
+        <!-- input의 value는 수정 가능
+             input의 placeholder는 수정 불가(그냥 배경처럼 박혀있음)
+        -->
+        <input type="text" name="uid"  value="아이디" />
+        <input type="text" name="password" placeholder="비밀번호" />
+        <input type="submit" value="로그인" />
+    </form>
+</body>
+</html> 
