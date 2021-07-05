@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float을 이용한 기본구성</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .header {
+            height: 20px;
+            background-color: red;
+        }
+        .nav {
+            height: 20px;
+            background-color: green;
+        }
+        /* 수평정렬
+            1)overflow:hidden 
+                - 자식 -> float, width 지정
+                - 부모 -> overflow:hidden 설정 
+                        왜? 부모가 자식을 몰라봐서 float 적용된 태그가 부유하고, 
+                            그 아래 태그가 뭐 없는 줄 알고 위로 올라감(footer)
+                            따라서 overflow:hidden으로 자식태그를 감싸고 위치를 정함
+
+            2)clear:both
+                - 자식 -> float, width 지정
+                - 부모 -> ::after -> clear:both, content:'', display:block 설정
+
+            3)display:flex
+                - 자식 -> width 지정
+                - 부모 -> display:flex 설정
+
+         */
+        .center {
+            overflow: hidden;
+        }
+        .aside {
+            height: 200px;
+            background-color: blueviolet;
+            width: 20%;
+            float: left;
+        }
+        .section {
+            height: 200px;
+            background-color: brown;
+            width: 80%;
+            float: left;
+        }
+        .footer {
+            height: 20px;
+            background-color: blue;
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="nav">nav</div>
+        <div class="center">
+            <div class="aside">aside</div>
+            <div class="section">section</div>
+        </div>
+        <div class="clear">clear</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
