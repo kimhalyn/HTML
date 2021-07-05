@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 태그(표 자체를 의미)</title>
+</head>
+<body>
+    <h3>기본 테이블</h3>
+    <!-- tr: 행 , td: 행 안의 각 요소 , th: 첫 행 제목 -->
+    <table border="10">
+        <!-- tr: table row -->
+        <tr>
+            <!--th: table header, 굵은 글자로 출력 -->
+            <th>아이디</th>
+            <th>이름</th>
+            <th>휴대폰</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <!-- td: table data -->
+            <td>a101</td>
+            <td>김유신</td>
+            <td>010-1234-1111</td>
+            <td>가야</td>
+        </tr>
+        <tr>
+            <td>a102</td>
+            <td>김춘추</td>
+            <td>010-1234-2222</td>
+            <td>경주</td>
+        </tr>
+        <tr>
+            <td>a103</td>
+            <td>장보고</td>
+            <td>010-1234-3333</td>
+            <td>완도</td>
+        </tr>
+        <tr>
+            <td>a104</td>
+            <td>강감찬</td>
+            <td>010-1234-4444</td>
+            <td>대전</td>
+        </tr>
+        <tr>
+            <td>a105</td>
+            <td>이순신</td>
+            <td>010-1234-5555</td>
+            <td>서울</td>
+        </tr>
+    </table>
+
+    <h3>테이블 셀 병합</h3>
+    <!-- table border: 표의 테두리 두께, colspan: 셀 너비 , rowspan: 셀 높이 -->
+    <table border="1">
+        <tr>
+            <td colspan="2">1x1</td>
+            <td>1x3</td>
+            <td rowspan="2">1x4</td>
+            <td rowspan="3">1x5</td>
+        </tr>
+        <tr>
+            <td colspan="3">2x1</td>
+        </tr>
+        <tr>
+            <td>3x1</td>
+            <td>3x2</td>
+            <td>3x3</td>
+            <td>3x4</td>
+        </tr>
+        <tr>
+            <td>4x1</td>
+            <td>4x2</td>
+            <td>4x3</td>
+            <td>4x4</td>
+            <td>4x5</td>
+        </tr>
+    </table>
+
+</body>
+</html> 

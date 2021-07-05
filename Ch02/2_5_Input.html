@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>입력필드 태그</title>
+</head>
+<body>
+    <!--
+        데이터 전송방식
+        GET 방식
+         - URL 주소 뒤에 Parameter(Query String) 형식으로 데이터를 전송
+         - 가장 일반적인 데이터 전송방식
+         - 비밀성을 갖는 데이터는 노출됨으로 POST로 전송
+        POST 방식
+         - Request 요청 객체에 심어서 데이터를 전송
+         - URL 주소에 데이터가 노출되지 않음
+         - 비밀성을 갖는 데이터 전송방식
+    -->
+    <h3>5.폼 입력 태그</h3>
+
+    <!-- input: 하면 type까지 빨리 작성 가능 -->
+    <h4>입력태그 종류</h4>
+    <form action="#">
+        <!-- value값으로 텍스트 상자 안에 기본글자 지정 가능 -->
+        <input type="text" value="text" /><br />
+        <input type="button" value="button" /><br /> 
+        <input type="checkbox" /><br />
+        <input type="file" /><br />
+        <input type="hidden" /><br />
+        <input type="image" /><br />
+        <input type="password" value="1234" /><br />
+        <input type="radio" /><br />
+        <input type="reset" /><br />
+        <!-- value값으로 버튼글자 지정 가능 -->
+        <input type="submit" value="제출버튼입니다" /><br /><br />
+        <input type="color" value="#f0ff0f" /><br />
+        <input type="date" /><br />
+        <input type="datetime" value="datetime" /><br />
+        <input type="datetime-local" /><br />
+        <input type="email" value="이메일 입력" /><br />
+        <input type="month" /><br />
+        <input type="number" value="1" /><br />
+        <input type="range" value="20" /><br />
+        <input type="search" value="search" /><br />
+        <input type="tel" value="tel" /><br />
+        <input type="time" /><br />
+        <input type="url" value="url" /><br />
+        <input type="week" /><br />
+    </form>
+
+    <h4>기본 입력태그</h4>
+    <form action="http://naver.com" method="GET">
+        <input type="text"     name="uid" />
+        <!-- password는 *로 입력됨 -->
+        <input type="password" name="pass" />
+        <input type="submit"   value="로그인" /><br />
+        
+        <!-- 1) label for와 input id를 동일하게 하면, label 클릭 시 input 안에 마우스 커서 자동으로 생김 
+             2) 그냥 label 태그 안에 input 두면 됨
+        -->
+        <label for="name">이름 :</label>    
+        <input type="text" value="이름을 입력하세요" id="name" /><br />
+        <label>취미 : <input type="text" name="hobby" value="취미를 입력하세요" /></label>
+    </form>
+
+    <h4>기타 입력태그</h4>
+    <form action="http://daum.net" method="GET">
+        <h4>취미를 선택하세요.</h4>
+        <!-- checkbox는 중복선택 가능 
+             네모 아이콘 형성
+        -->
+        <label><input type="checkbox" name="hobby" value="1" />등산</label>
+        <label><input type="checkbox" name="hobby" value="2" />독서</label>
+        <label><input type="checkbox" name="hobby" value="3" />영화</label>
+        <label><input type="checkbox" name="hobby" value="4" />게임</label>
+        <label><input type="checkbox" name="hobby" value="5" />운동</label>
+        <label><input type="checkbox" name="hobby" value="6" />요리</label>
+
+        <h4>성별을 선택하세요.</h4>
+        <!-- 하나만 선택할 때 radio 사용, 
+             name이 같을 때 단일 선택 가능하며,
+             name이 다르면 checkbox와 기능 동일함
+             동그라미 아이콘 형성
+        -->
+        <label><input type="radio" name="gender" value="1" />남</label>
+        <label><input type="radio" name="gender" value="2" />여</label>
+
+        <h4>주소를 선택하세요.</h4>
+        <select name="addr">
+            <option value="1">서울</option>
+            <option value="2">대전</option>
+            <option value="3">대구</option>
+            <option value="4">부산</option>
+            <option value="5">광주</option>
+        </select><br /><br />
+
+        <select name="fruit">
+            <optgroup label="수입과일">
+            <option value="1">체리</option>
+            <option value="2">메론</option>
+            <option value="3">망고</option>
+            </optgroup>
+            <option value="4">사과</option>
+            <option value="5">배</option>
+            <option value="6">귤</option>
+        </select>
+
+        <h4>날짜를 선택하세요.</h4>
+        <input type="date" name="date" />
+        <input type="submit" value="전송" />
+    </form>
+
+    <h4>POST 전송</h4>
+    <form action="http://nate.com" method="POST">
+        <h4>자기소개</h4>
+        <!-- textarea cols:너비, rows:몇 줄 입력 가능할지 지정 -->
+        <textarea name="introduce" cols="30" rows="10">내용을 입력하세요.</textarea> 
+        <input type="submit" value="전송하기" /><br />
+
+        <h4>contenteditable</h4>
+        <p contenteditable="true">댓글을 달아주세요.</p>
+
+</body>
+</html> 
