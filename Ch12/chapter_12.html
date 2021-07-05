@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://getbootstrap.com/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Basic Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 일반형 툴바, 고정형 툴바는 class명에 fixed-top navbar-expand-lg 추가 + body {padding-top:70px}-->
+    <div class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">HTML</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Geolocation</a>
+                            <a class="dropdown-item" href="#">Drag and Drop</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Motion</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ECMAScript5</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Node.js</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">API</a></li>
+                </ul>
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search" />
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="#">Node.js</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">API</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Fixed 레이아웃, 너비가 960px로 고정 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">Panel Title</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">HTML5</a></li>
+                        <li class="list-group-item"><a href="#">CSS3</a></li>
+                        <li class="list-group-item"><a href="#">ECMAScript5</a></li>
+                    </ul>
+                </div>
+                <br />
+                <div class="card bg-info">
+                    <div class="card-header">Panel Title</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">jQuery</a></li>
+                        <li class="list-group-item"><a href="#">HTML5 API</a></li>
+                    </ul>
+                </div>
+                <br />
+                <div class="card bg-secondary">
+                    <div class="card-header">Panel Title</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">About</a></li>
+                        <li class="list-group-item"><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <br />
+            </div>
+            <div class="col-md-9">
+                <div class="jumbotron">
+                    <h1>HTML5 + CSS3 Basic</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad pariatur sint, minima accusantium voluptatem, reiciendis eius odio dolor quo blanditiis non omnis quas! Dolorem ullam soluta recusandae dolorum ducimus aspernatur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad pariatur sint, minima accusantium voluptatem, reiciendis eius odio dolor quo blanditiis non omnis quas! Dolorem ullam soluta recusandae dolorum ducimus aspernatur.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Learn more</a>
+                </div>
+                <h1>Lorem Ipsum</h1>
+                <p>Quis Lorem velit do ipsum deserunt. Deserunt non eu aliquip officia sint occaecat ex in sunt ea sint. Excepteur veniam consectetur cillum amet consectetur exercitation nostrud excepteur est deserunt irure velit. Deserunt dolore aliquip excepteur consectetur magna et culpa eu proident eu magna non est. Cupidatat non adipisicing elit minim.</p>
+                <p>Excepteur ipsum officia qui elit mollit adipisicing minim aliquip aliquip enim commodo incididunt. Id do non nostrud ut nisi elit mollit anim. Quis voluptate sunt enim incididunt magna.</p>
+                <p>Sunt laborum ut do culpa culpa consequat voluptate occaecat anim nisi consectetur. Sint aliqua qui officia cupidatat Lorem enim et qui sunt anim aliquip laborum commodo. Commodo nulla nisi officia cillum sunt. Elit consectetur qui commodo pariatur eu enim.</p>
+                <p>Voluptate culpa culpa culpa nostrud aliquip voluptate veniam culpa aliquip ipsum nulla minim cillum sint. Ut anim amet cillum esse exercitation ad aliquip pariatur veniam et anim eu. Labore non consectetur ea Lorem ut ut ullamco excepteur laborum adipisicing duis.</p>
+                <p>Voluptate culpa culpa culpa nostrud aliquip voluptate veniam culpa aliquip ipsum nulla minim cillum sint. Ut anim amet cillum esse exercitation ad aliquip pariatur veniam et anim eu. Labore non consectetur ea Lorem ut ut ullamco excepteur laborum adipisicing duis.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Fluid 레이아웃, 화면 크기에 맞게 레이아웃 변경 -->
+    <div class="container-fluid">
+        <h1>Lorem Ipsum</h1>
+        <p>Quis Lorem velit do ipsum deserunt. Deserunt non eu aliquip officia sint occaecat ex in sunt ea sint. Excepteur veniam consectetur cillum amet consectetur exercitation nostrud excepteur est deserunt irure velit. Deserunt dolore aliquip excepteur consectetur magna et culpa eu proident eu magna non est. Cupidatat non adipisicing elit minim.</p>
+        <p>Excepteur ipsum officia qui elit mollit adipisicing minim aliquip aliquip enim commodo incididunt. Id do non nostrud ut nisi elit mollit anim. Quis voluptate sunt enim incididunt magna.</p>
+        <p>Sunt laborum ut do culpa culpa consequat voluptate occaecat anim nisi consectetur. Sint aliqua qui officia cupidatat Lorem enim et qui sunt anim aliquip laborum commodo. Commodo nulla nisi officia cillum sunt. Elit consectetur qui commodo pariatur eu enim.</p>
+        <p>Voluptate culpa culpa culpa nostrud aliquip voluptate veniam culpa aliquip ipsum nulla minim cillum sint. Ut anim amet cillum esse exercitation ad aliquip pariatur veniam et anim eu. Labore non consectetur ea Lorem ut ut ullamco excepteur laborum adipisicing duis.</p>
+    </div>
+</body>
+</html>
+
+
