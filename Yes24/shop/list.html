@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YES24 | 대한민국 대표 인터넷서점</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+   <style>
+   /* 서브 내비게이션 */ 
+    .subNav {
+        position: absolute;
+        left: 110px;
+        top: 0;
+        width: 980px;
+        height: 35px;
+        border: 1px solid  #e5e5e5;
+        background-color: #f8f8f8;
+        box-sizing: border-box;
+    }
+    .subNav p {
+        width: auto;
+        height: 35px;
+        line-height: 35px;
+        color: #666;
+        padding-left: 10px;
+    }
+
+   /* 중앙 카테고리 */
+    .mCate {
+        position: absolute;
+        width: 980px;
+        height: 45px;
+        left: 130px;
+        top: 55px;
+        height: 421px;
+    }
+    .cateTitle {
+        font-size: 22px;
+        color: #196ab3;
+        font-weight: bold;
+    }
+    .mList {
+        position: absolute;
+        width: 950px;
+        left: 130px;
+        top: 100px;
+        padding: 13px 0;
+        border: 2px solid #6699cc;
+        background-color: #fff;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .mList dt {
+        float: left;
+        width: 20%;
+    }
+    .mList dt a {
+        display: block;
+        padding-left: 21px;
+        height: 26px;
+        overflow: hidden;
+        line-height: 26px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #6699cc;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .mList dt a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    
+
+   /* 중앙 요소 리스트 */
+   .sortList {
+        position: absolute;
+        width: 950px;
+        left: 130px;
+        top: 210px;
+        border: 1px solid #d8d8d8;
+        box-sizing: border-box;
+        overflow: hidden;
+   }
+   .sortTop {
+       position: relative;
+       padding: 10px 0;
+   }
+   .topLft {
+       padding-left: 20px;
+       height: 25px;
+       line-height: 25px;
+   }
+   .topLft a.on {
+       font-weight: bold;
+       color: #6699cc;
+   }
+   .topLft a {
+       margin-right: 10px;
+       color: #666;
+   }
+   .topLft a.off:hover {
+       color: #333;
+       font-weight: bold;
+   }
+
+
+
+   .sortBot {
+       position: relative;
+       height: 46px;
+       line-height: 46px;
+       border-top: 1px solid #ebebeb;
+       background-color: #f8f8f8;
+   }
+   .botLft {
+       margin-left: 20px;
+       font-size: 14px;
+   }
+   .botLft a.prev {
+       font-weight: bold;
+       color: #e5e5e5;
+   }
+   .botLft a.next {
+       font-weight: bold;
+       color: #999999;
+   }
+   .botLft a strong.num {
+       display: inline-block;
+       font-weight: bold;
+       color: #333;
+       border: solid 1px #d8d8d8;
+       background-color: #fff;
+       display: inline-block;
+       margin: 0 -2px;
+       padding: 0 2px 0 1px;
+       min-width: 21px;
+       height: 24px;
+       line-height: 24px;
+       font-size: 12px;
+       text-align: center;
+   }
+   .botLft a.num {
+       display: inline-block;
+       margin: 0 -2px;
+       padding: 0 2px 0 1px;
+       min-width: 21px;
+       height: 24px;
+       line-height: 24px;
+       font-size: 12px;
+       color: #666;
+       text-align: center;
+   }
+   .botLft a.num:hover {
+        text-decoration: none;
+        border: 1px solid #d8d8d8;
+        background-color: #fff;
+   }
+   
+
+
+
+   /**/
+   /**/
+
+
+
+
+        
+   </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">마이페이지▼</a>
+                    <a href="#">카트</a>
+                    <a href="#">주문/배송</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="#"><img src="../img/header_logo.png" alt="로고"></a>
+                    <form action="#">
+                        <input type="text" name="search">
+                        <button><img src="../img/header_search_icon.png" alt="search"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">북클럽</a></li>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">신상품</a></li>
+                        <li><a href="#">바이백</a></li>
+                        <li><a href="#">중고매장</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <sub>
+                <!-- 마이 예스24 -->
+                <aside class="myes">
+                    <ul>
+                        <li><a href="#">마이 예스24</a></li>
+                        <li><a href="#">최근 본 상품</a></li>
+                        <li class="on"><a href="#">최근<br /> 본 상품이<br /> 없습니다.</a></li>
+                        <li><a href="#">단독 판매</a></li>
+                    </ul>
+                </aside>
+                <!-- 카테고리 및 내비게이션 -->
+                <section class="main_1">
+                    <div class="category">
+                        <ul>
+                            <li><a href="#" class="item">국내도서</a>
+                                <ol>
+                                    <li><a href="#">소설/시/에세이</a></li>
+                                    <li><a href="#">인문/경영/경제</a></li>
+                                    <li><a href="#">외국어</a></li>
+                                    <li><a href="#">수험서</a></li>
+                                    <li><a href="#">어린이</a></li>
+                                    <li><a href="#">요리</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">외국도서</a>
+                                <ol>
+                                    <li><a href="#">ELT사전</a></li>
+                                    <li><a href="#">대학교재 전문서</a></li>
+                                    <li><a href="#">일본/중국/프랑스</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">eBook</a>
+                                <ol>
+                                    <li><a href="#">장르소설</a></li>
+                                    <li><a href="#">단행본</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">웹소설/코믹</a>
+                                <ol>
+                                    <li><a href="#">웹소설</a></li>
+                                    <li><a href="#">웹툰/만화</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">CD/LP</a>
+                                <ol>
+                                    <li><a href="#">가요/클래식</a></li>
+                                    <li><a href="#">POP/ROCK</a></li>
+                                    <li><a href="#">재즈</a></li>
+                                    <li><a href="#">유아/어린이/명상</a></li>
+                                    <li><a href="#">뉴에이지</a></li>
+                                    <li><a href="#">월드뮤직</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">DVD/Blu-ray</a>
+                                <ol>
+                                    <li><a href="#">예약판매</a></li>
+                                    <li><a href="#">할인행사</a></li>
+                                    <li><a href="#">블루레이</a></li>
+                                    <li><a href="#">드라마/코미디</a></li>
+                                    <li><a href="#">닌텐도/게임</a></li>
+                                    <li><a href="#">비디오/VCD</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">영화</a>
+                                <ol>
+                                    <li><a href="#">영화</a></li>
+                                    <li><a href="#">PLAY24</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">공연</a>
+                                <ol>
+                                    <li><a href="#">콘서트/뮤지컬</a></li>
+                                    <li><a href="#">클래식/무용</a></li>
+                                    <li><a href="#">전시/행사</a></li>
+                                    <li><a href="#">가족/아동</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">문구/GIFT</a>
+                                <ol>
+                                    <li><a href="#">디자인 문구</a></li>
+                                    <li><a href="#">필기구/필통</a></li>
+                                    <li><a href="#">디지털/가전</a></li>
+                                    <li><a href="#">취미/키덜트</a></li>
+                                    <li><a href="#">여행/레저</a></li>
+                                    <li><a href="#">패션잡화</a></li>
+                                    <li><a href="#">가구/수납</a></li>
+                                    <li><a href="#">생활/건강</a></li>
+                                    <li><a href="#">홈데코/패브릭</a></li>
+                                    <li><a href="#">주방/푸드</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">중고샵</a>
+                                <ol>
+                                    <li><a href="#">중고도서</a></li>
+                                    <li><a href="#">직배송 중고</a></li>
+                                    <li><a href="#">중고 음반</a></li>
+                                    <li><a href="#">중고 DVD</a></li>
+                                    <li><a href="#">중고매장</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">iSTYLE24</a>
+                                <ol>
+                                    <li><a href="#">유니섹스캐주얼</a></li>
+                                    <li><a href="#">유아용</a></li>
+                                    <li><a href="#">골프/스포츠</a></li>
+                                    <li><a href="#">여성패션</a></li>
+                                    <li><a href="#">남성패션</a></li>
+                                    <li><a href="#">아웃렛</a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 서브 내비게이션 -->
+                    <div class="subNav">
+                        <p>웰컴 > 국내도서 > 경제 경영</p>
+                    </div>
+                    <!-- 중앙 카테고리 -->
+                    <div class="mCate">
+                        <h3 class="cateTitle">경제 경영</h3>
+                    </div>
+                    <div class="mList">
+                        <dl>
+                            <dt><a href="#">경제</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">경영</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">투자/재테크</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">마케팅/세일즈</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">CEO/비즈니스맨</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">인터넷비즈니스</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">총람/연감</a></dt>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">정부간행물</a></dt>
+                        </dl>
+                    </div>
+                    <!-- 중앙 요소 리스트 -->
+                    <div class="sortList">
+                        <div class="sortTop">
+                           <span class="topLft">
+                               <a href="#" class="on">기본순</a>
+                               <a href="#" class="off">판매량순</a>
+                               <a href="#" class="off">신상품순</a>
+                               <a href="#" class="off">최저가순</a>
+                               <a href="#" class="off">최고가순</a>
+                               <a href="#" class="off">상품명순</a>
+                           </span>
+                        </div>
+                        <div class="sortBot">
+                            <span class="botLft">
+                                <a href="#" class="prev"><<</a>
+                                <a href="#" class="prev"><</a>
+                                <a href="#"><strong class="num">1</strong></a>
+                                <a href="#" class="num">2</a>
+                                <a href="#" class="num">3</a>
+                                <a href="#" class="num">4</a>
+                                <a href="#" class="num">5</a>
+                                <a href="#" class="num">6</a>
+                                <a href="#" class="num">7</a>
+                                <a href="#" class="num">8</a>
+                                <a href="#" class="num">9</a>
+                                <a href="#" class="num">10</a>
+                                <a href="#" class="next">></a>
+                                <a href="#" class="next">>></a>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </sub>
+            <!-- 리스트 -->
+            <div class="listArea">
+                <ul class="clearfix">
+                    <li>
+                        <div class="goodsSet">
+                            <p class="goods_img">
+                                <span class="goods_imgSet">
+                                    <a href="#"><img src="" alt=""></a>
+                                </span>
+                                <a href="#" class="btn_prev">
+                                    <span class="bWrap">
+                                        <em class="txt">미리보기</em>
+                                    </span>
+                                </a>
+                            </p>
+                            <div class="goods_info">
+                                <div class="goods_keynote">
+                                    <a href="#"><img src="" alt="">오늘의책</a>
+                                    <a href="#"><img src="" alt="">이벤트</a>
+                                </div>
+                                <div class="goods_name">
+                                    <span class="gd_nameF"><a href="#">버블: 부의 대전환</a></span>
+                                    <span class="gd_nameE">돈의 미래를 결정하는 지각변동</span>
+                                </div>
+                                <div class="goods_pubGrp">
+                                    <span class="gd_auth">
+                                        <a href="#">존 D. 터너</a>
+                                        <a href="#">윌리엄 퀸</a>
+                                        <a href="#">최지수</a>
+                                    </span>
+                                    <em class="divi">|</em>
+                                    <span class="gd_pub">브라이트</span>
+                                    <em class="divi">|</em>
+                                    <span class="gd_date">2021년 01월</span>
+                                </div>
+                                <div class="goods_price">
+                                    <em class="yes_p">16,200</em>
+                                    <span class="gd_benefit">(10% 할인)</span>
+                                    <em class="gd_point"><img src="" alt="">900</em>
+                                </div>
+                                <div class="goods_rating">
+                                    
+                                </div>
+                                <div class="goods_deli"></div>
+                                <div class="goods_read"></div>
+                                <div></div>
+                            </div>
+                            <div class="goods_btn"></div>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </main>
+        <footer>
+            <div class="footer_wrap">
+                <div class="footer_top">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">도서홍보안내</a></li>
+                        <li><a href="#">광고안내</a></li>
+                        <li><a href="#">제휴안내</a></li>
+                        <li><a href="#">복지제휴</a></li>
+                        <li><a href="#">중고매장</a></li>
+                    </ul>
+                </div>
+                <div class="footer_middle">
+                    <p class="logo"><img src="../img/footer_logo.png" alt="푸터 로고"></p>
+                    <p class="info">
+                        <dl class="cname">
+                            <dt><em class="ctit">예스이십사(주)</em></dt>
+                            <dd>
+                                <address>
+                                    서울시 영등포구 은행로 11, 5층~6층(여의도동,일신빌딩)<br />
+                                    대표 : 김석환   개인정보보호책임자 : 권민석 yes24help@yes24.com<br />
+                                    사업자등록번호 : 229-81-37000   통신판매업신고 : 제 2005-02682호 <span class="cinfo"><a href="#">사업자 정보확인 > </a></span><br />
+                                    호스팅 서비스사업자 : 예스이십사(주)<br />
+                                    Copyright ⓒ YES24 Corp. All Rights Reserved.
+                                </address>
+                            </dd>
+                        </dl>
+                        <dl class="center">
+                            <dt>고객만족센터 T.<span class="cen_num">1544-3800</span></dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="cen_info">중고샵 문의</span>1566-4295</li>
+                                    <li><span>영화예매 문의</span>1544-7758</li>
+                                    <li><span>공연예매 문의</span>1544-6399</li>
+                                </ul>
+                            </dd>
+                            <dd>
+                                <a href="#">1:1 문의하기 ></a>
+                                <a href="#">자주 묻는 질문 ></a>
+                                <a href="#">상담시간 안내 ></a>
+                            </dd>
+                        </dl>
+                    </p>
+                </div>       
+                <div class="footer_bottom"><img src="../img/footer_glory.gif" alt="브랜드 평판"></div>
+            </div>      
+        </footer>
+    </div>
+    
+</body>
+</html>

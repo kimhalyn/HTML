@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YES24 | 대한민국 대표 인터넷서점</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        $(function(){
+            $('.slider1 > ul').bxSlider({
+                pager: false, // 밑에 슬라이더 개수 표기
+                controls: true, // 슬라이더 옆으로 넘기기
+                auto: true, // 자동으로 슬라이더 넘기기
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">마이페이지▼</a>
+                    <a href="#">카트</a>
+                    <a href="#">주문/배송</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="#"><img src="./img/header_logo.png" alt="로고"></a>
+                    <form action="#">
+                        <input type="text" name="search">
+                        <button><img src="./img/header_search_icon.png" alt="search"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">북클럽</a></li>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">신상품</a></li>
+                        <li><a href="#">바이백</a></li>
+                        <li><a href="#">중고매장</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <sub>
+                <!-- 마이 예스24 -->
+                <aside class="myes">
+                    <ul>
+                        <li><a href="#">마이 예스24</a></li>
+                        <li><a href="#">최근 본 상품</a></li>
+                        <li class="on"><a href="#">최근<br /> 본 상품이<br /> 없습니다.</a></li>
+                        <li><a href="#">단독 판매</a></li>
+                    </ul>
+                </aside>
+                <!-- 카테고리, 슬라이더 -->
+                <section class="main_1">
+                    <div class="category">
+                        <ul>
+                            <li><a href="#" class="item">국내도서</a>
+                                <ol>
+                                    <li><a href="#">소설/시/에세이</a></li>
+                                    <li><a href="#">인문/경영/경제</a></li>
+                                    <li><a href="#">외국어</a></li>
+                                    <li><a href="#">수험서</a></li>
+                                    <li><a href="#">어린이</a></li>
+                                    <li><a href="#">요리</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">외국도서</a>
+                                <ol>
+                                    <li><a href="#">ELT사전</a></li>
+                                    <li><a href="#">대학교재 전문서</a></li>
+                                    <li><a href="#">일본/중국/프랑스</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">eBook</a>
+                                <ol>
+                                    <li><a href="#">장르소설</a></li>
+                                    <li><a href="#">단행본</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">웹소설/코믹</a>
+                                <ol>
+                                    <li><a href="#">웹소설</a></li>
+                                    <li><a href="#">웹툰/만화</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">CD/LP</a>
+                                <ol>
+                                    <li><a href="#">가요/클래식</a></li>
+                                    <li><a href="#">POP/ROCK</a></li>
+                                    <li><a href="#">재즈</a></li>
+                                    <li><a href="#">유아/어린이/명상</a></li>
+                                    <li><a href="#">뉴에이지</a></li>
+                                    <li><a href="#">월드뮤직</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">DVD/Blu-ray</a>
+                                <ol>
+                                    <li><a href="#">예약판매</a></li>
+                                    <li><a href="#">할인행사</a></li>
+                                    <li><a href="#">블루레이</a></li>
+                                    <li><a href="#">드라마/코미디</a></li>
+                                    <li><a href="#">닌텐도/게임</a></li>
+                                    <li><a href="#">비디오/VCD</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">영화</a>
+                                <ol>
+                                    <li><a href="#">영화</a></li>
+                                    <li><a href="#">PLAY24</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">공연</a>
+                                <ol>
+                                    <li><a href="#">콘서트/뮤지컬</a></li>
+                                    <li><a href="#">클래식/무용</a></li>
+                                    <li><a href="#">전시/행사</a></li>
+                                    <li><a href="#">가족/아동</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">문구/GIFT</a>
+                                <ol>
+                                    <li><a href="#">디자인 문구</a></li>
+                                    <li><a href="#">필기구/필통</a></li>
+                                    <li><a href="#">디지털/가전</a></li>
+                                    <li><a href="#">취미/키덜트</a></li>
+                                    <li><a href="#">여행/레저</a></li>
+                                    <li><a href="#">패션잡화</a></li>
+                                    <li><a href="#">가구/수납</a></li>
+                                    <li><a href="#">생활/건강</a></li>
+                                    <li><a href="#">홈데코/패브릭</a></li>
+                                    <li><a href="#">주방/푸드</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">중고샵</a>
+                                <ol>
+                                    <li><a href="#">중고도서</a></li>
+                                    <li><a href="#">직배송 중고</a></li>
+                                    <li><a href="#">중고 음반</a></li>
+                                    <li><a href="#">중고 DVD</a></li>
+                                    <li><a href="#">중고매장</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#" class="item">iSTYLE24</a>
+                                <ol>
+                                    <li><a href="#">유니섹스캐주얼</a></li>
+                                    <li><a href="#">유아용</a></li>
+                                    <li><a href="#">골프/스포츠</a></li>
+                                    <li><a href="#">여성패션</a></li>
+                                    <li><a href="#">남성패션</a></li>
+                                    <li><a href="#">아웃렛</a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider1">
+                        <ul>
+                            <li><a href="#"><img src="./img/main_slider_1.png" alt="슬라이더1"></a></li>
+                            <li><a href="#"><img src="./img/main_slider_2.png" alt="슬라이더2"></a></li>
+                            <li><a href="#"><img src="./img/main_slider_3.png" alt="슬라이더3"></a></li>
+                            <li><a href="#"><img src="./img/main_slider_4.png" alt="슬라이더4"></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </sub>
+            <!-- 오늘의 책, 베스트셀러 -->
+            <section class="main_2">
+                <div class="slider_tb">
+                    <div class="tb_all">
+                        <div class="tb_img"><a href="#"><img src="./img/today_book_1_1.png" alt="오늘의 책1"></a></div>
+                        <div class="tb_wri">
+                            <h2><a href="#">오늘의 책 ></a></h2>
+                            <p class="tb_tit"><a href="#">옴베르토 에코의 유작 에세이</a></p>
+                            <p class="tb_read"><a href="#">20세기를 대표하는 지식인 움베르토 에코의 5주기를 맞아 출간한 유작 에세이집. 2000년부터 타계 전까지 쓴 55편의 글을 모았다. 온갖 불합리하고 나쁜 일들이 일어나는 세상을 향해 날카롭지만 유머를 잃지 않는 에코의 통찰이 담겼다. 독자들을 위해 에코가 남긴 마지막 선물이 될 것이다.</a></p>
+                            <p class="tb_name"><a href="#">미친 세상을 이해하는 척하는 방법</a></p>
+                            <p class="tb_pub">움베르토 에코 저/박종대 역 |&nbsp;&nbsp;열린책들</p>
+                            <p class="tb_price">
+                                <span class="txt_price">
+                                    <strong><em class="st_price">13,320</em>원</strong>(10% 할인)</span>
+                                <span class="txt_point"><em class="icon_point">포인트</em><i>740원</i></span>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="bs">
+                    <h2><em class="bs_tit">베스트셀러</em></h2>
+                    <div class="bs_opt">
+                        <ul class="opt_list">
+                            <li class="button"><a href="#">국내도서</a></li>
+                            <li class="hide"><a href="#">국내도서</a></li>
+                            <li class="hide"><a href="#">외국도서</a></li>
+                            <li class="hide"><a href="#">eBook</a></li>
+                            <li class="hide"><a href="#">웹소설/코믹</a></li>
+                            <li class="hide"><a href="#">CD/LP</a></li>
+                            <li class="hide"><a href="#">DVD/Blu-ray</a></li>
+                            <li class="hide"><a href="#">영화</a></li>
+                            <li class="hide"><a href="#">공연</a></li>
+                            <li class="hide"><a href="#">문구/GIFT</a></li>
+                            <li class="hide"><a href="#">중고샵</a></li>
+                            <li class="hide"><a href="#">iSTYLE24</a></li>
+                        </ul>
+                    </div>    
+                    <div class="bs_sub">
+                        <span class="sub_tit">
+                            <span class="tit1"><strong>1~5위</strong><em>|</em></span>
+                            <span class="tit2">6~10위</span>
+                            <span class="tit3">더보기 ></span>
+                        </span>
+                    </div>    
+                    <div class="bs_rnk">
+                        <ol>
+                            <li class="sub_rnk">
+                                <div class="rnk_top">
+                                    <div class="rnk_1">
+                                        <strong class="rnk_icon"><a href="#">1</a></strong>
+                                        <span class="rnk_img"><a href="#"><img src="./img/rnk_1.png" alt="베스트셀러 1위"></a></span>
+                                        <span class="rnk_info">
+                                            <strong>주린이가 가장 알고 싶은 최다질문 TOP 77</strong>
+                                            <em>염승환 저</em>
+                                        </span>
+                                    </div>
+                                    <div class="rnk_1">
+                                        <strong class="rnk_icon"><a href="#">2</a></strong>
+                                        <span class="rnk_img"><a href="#"><img src="./img/rnk_2.png" alt="베스트셀러 2위"></a></span>
+                                        <span class="rnk_info">
+                                            <strong>달러구트 꿈 백화점</strong>
+                                            <em>이미예 저</em>
+                                        </span>
+                                    </div>
+                                    <div class="rnk_1">
+                                        <strong class="rnk_icon"><a href="#">3</a></strong>
+                                        <span class="rnk_img"><a href="#"><img src="./img/rnk_3.png" alt="베스트셀러 3위"></a></span>
+                                        <span class="rnk_info">
+                                            <strong>2030 축의 전환</strong>
+                                            <em>마우로 기옌 저/우진하 역</em>
+                                        </span>
+                                    </div>
+                                    <div class="rnk_1">
+                                        <strong class="rnk_icon"><a href="#">4</a></strong>
+                                        <span class="rnk_img"><a href="#"><img src="./img/rnk_4.png" alt="베스트셀러 4위"></a></span>
+                                        <span class="rnk_info">
+                                            <strong>어떻게 말해줘야 할까</strong>
+                                            <em>오은영 저/차상미 그림</em>
+                                        </span>
+                                    </div>
+                                    <div class="rnk_1">
+                                        <strong class="rnk_icon"><a href="#">5</a></strong>
+                                        <span class="rnk_img"><a href="#"><img src="./img/rnk_5.png" alt="베스트셀러 5위"></a></span>
+                                        <span class="rnk_info">
+                                            <strong>모래알만 한 진실이라도</strong>
+                                            <em>박완서 저</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </li>
+                        </ol>
+                    </div>    
+                </div>
+            </section>
+            <!-- 지금 이 책, 출판사 추천 -->
+            <section class="main_3">
+                <div class="bk_area1">
+                    <h2><a href="#">지금, 이 책 ></a></h2>
+                    <div class="bk_items">
+                        <div class="bk_item">
+                            <ul>
+                                <li class="nb1">
+                                    <p class="nb_img"><a href="#"><img src="./img/nb_1_1.png" alt="지금이책"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_read">재미있게 경제를 배워요</p>
+                                        <p class="nb_tit"><a href="#">경제를 알면 세상이 보여!</a></p>
+                                        <p class="nb_pub">제자벨 쿠페 수베랑 글/오리안 뷔 그림/이정주 역/안효상 감수</p>
+                                        <p class="nb_price"><em>11,700</em></p> 
+                                    </div>
+                                </li>
+                                <li class="nb2">
+                                    <p class="nb_img"><a href="#"><img src="./img/nb_1_2.png" alt="지금이책"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_read">『철도원』 아사다 지로 신작</p>
+                                        <p class="nb_tit"><a href="#">겨울이 지나간 세계</a></p>
+                                        <p class="nb_pub">아사다 지로 저/이선희 역<em class="nb_divi">|</em>부키</p>
+                                        <p class="nb_price"><em>14,400</em></p> 
+                                    </div>
+                                </li>
+                                <li class="nb3">
+                                    <p class="nb_img"><a href="#"><img src="./img/nb_1_3.png" alt="지금이책"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_read">포로수용소의 프루스트 강의</p>
+                                        <p class="nb_tit"><a href="#">무너지지 않기 위하여</a></p>
+                                        <p class="nb_pub">유제프 차프스키 저/류재화 역</p>
+                                        <p class="nb_price"><em>13,500</em></p> 
+                                    </div>
+                                </li>
+                                <li class="nb4">
+                                    <p class="nb_img"><a href="#"><img src="./img/nb_1_4.png" alt="지금이책"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_read">입지분석 고수 탑곰 첫 책</p>
+                                        <p class="nb_tit"><a href="#">서울 아파트 황금 지도</a></p>
+                                        <p class="nb_pub">탑곰 저<em class="nb_divi">|</em>비에이블</p>
+                                        <p class="nb_price"><em>14,850</em></p> 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bk_area2">
+                    <h2><strong>출판사 추천</strong></h2>
+                    <ul>
+                        <li class="rc_1">
+                            <p class="rc_img"><a href="#"><img src="./img/rc_1.png" alt="추천 이미지"></a></p>
+                            <p class="rc_tit"><a href="#">병명은 가족</a></p>
+                            <p class="rc_read"><a href="#">누구나<br />가족이라는<br />병을 겪는다</a></p>
+                        </li>
+                        <li class="rc_2">
+                            <p class="rc_img"><a href="#"><img src="./img/rc_2.png" alt="추천 이미지"></a></p>
+                            <p class="rc_tit"><a href="#">믿고 보는<br />동양고전</a></p>
+                            <p class="rc_read"><a href="#">김원중 교수의<br />명역고전 완간!</a></p>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+            <!-- 북클럽샵 화제의 책,  북클럽 월별 신간-->
+            <section class="main_3">
+                <div class="bk_area1">
+                    <h2><a href="#"><em class="bks">북클럽샵</em> 화제의 책 ></a></h2>
+                    <div class="bk_items">
+                        <div class="bk_item">
+                            <ul>
+                                <li class="nb1">
+                                    <p class="nb_img"><a href="#"><img src="./img/bks1_1.png" alt="북클럽샵"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_tit"><a href="#">사이보그가 되다</a></p>
+                                        <p class="nb_pub">김초엽,김원영 공저<em class="nb_divi">|</em>사계절</p>
+                                        <p class="nb_price"><em>16,020</em></p> 
+                                    </div>
+                                </li>
+                                <li class="nb2">
+                                    <p class="nb_img"><a href="#"><img src="./img/bks1_2.png" alt="북클럽샵"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_tit"><a href="#">우리가 사랑한 내일들</a></p>
+                                        <p class="nb_pub">유선애 저<em class="nb_divi">|</em>한겨레출판</p>
+                                        <p class="nb_price"><em>14,400</em></p> 
+                                    </div>
+                                </li>
+                                <li class="nb3">
+                                    <p class="nb_img"><a href="#"><img src="./img/bks1_3.png" alt="북클럽샵"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_tit"><a href="#">모두와 친구가 되고 싶은 오로르</a></p>
+                                        <p class="nb_pub">더글라스 케네디 저/조안 스파르 그림/조동섭 역<em class="nb_divi">|</em>밝은세상</p>
+                                        <p class="nb_price"><em>13,500</em></p> 
+                                    </div>
+                                </li>
+                                <li class="nb4">
+                                    <p class="nb_img"><a href="#"><img src="./img/bks1_4.png" alt="북클럽샵"></a></p>
+                                    <div class="nb_info">
+                                        <p class="nb_tit"><a href="#">테라 인코그니타</a></p>
+                                        <p class="nb_pub">강인욱 저<em class="nb_divi">|</em>창비</p>
+                                        <p class="nb_price"><em>16,200</em></p> 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bk_area3">
+                    <a href="#"><img src="./img/bks_bn.png" alt="북클럽샵 이미지" class="bks_bn"></a>
+                </div>
+
+
+
+
+            </section>
+            <!-- 북클러버 모집 광고 -->
+            <section class="main_4"><a href="#"><img src="./img/bn.jpg" alt="북클러버 배너"></a></section>
+            <!-- 예스티비, 채널예스, 예스블로그-->
+            <section class="main_3">
+                <div class="bk_area1">
+                    <h2><a href="#">예스티비 ></a></h2>
+                        <div class="bk_item">
+                            <iframe width="350" height="230" src="https://www.youtube.com/embed/oSEJ_14xuQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <span class="mov_txt">여행가고싶어비행기타고싶어놀러가고싶어! | <br />책으로 떠나는 역사 인문 지리 여행 신간</span>
+                    </div>
+                    <span class="goods_tit">관련상품</span>
+                    <div class="tvgoods">
+                        <span class="goods_img"><a href="#"><img src="./img/goods_1.png" alt="관련상품 이미지"></a></span>
+                        <span class="goods_info">
+                            <span class="goods_read">돌·물·피·돈·불·발·꿈으로 풀어낸 독특한 시선의 인문 기행</span>
+                            <span class="goods_name"><a href="#">7개 코드로 읽는 유럽 도시</a></span>
+                            <span class="goods_aupu">
+                                <span class="goods_auth">윤혜준 저</span>
+                                <span class="goods_pub">아날로그(글담)</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="others">
+                        <iframe class="oth1" width="100" height="60" src="https://www.youtube.com/embed/6yZ0pyq4xhE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="oth2" width="100" height="60" src="https://www.youtube.com/embed/oSEJ_14xuQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="oth3" width="100" height="60" src="https://www.youtube.com/embed/me6DCsvJVng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <div class="bk_area2">
+                    <h2><strong>채널 예스 ></strong></h2>
+                    <ul>
+                        <li class="rc_1">
+                            <p class="rc_img_1"><a href="#"><img src="./img/yes_ch.png" alt="채널예스 이미지"></a></p>
+                        </li>
+                        <li class="rc_3">
+                            <h2 class="blog"><strong>예스 블로그 ></strong></h2>
+                            <p class="rc_img_1"><a href="#"><img src="./img/yes_blog.png" alt="예스블로그 이미지"></a></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 대표서비스, 공지사항 -->
+            <section class="main_5">
+                <div class="serv_tit">
+                    <h2>YES24 대표서비스</h2>
+                </div>
+                <div class="serv_dl">
+                    <dl>
+                        <dt><strong>싸다</strong></dt>
+                        <dd><a href="#">영원한 YES포인트</a></dd>
+                        <dd><a href="#">무료배송+추가적립</a></dd>
+                        <dd><a href="#">신규회원 혜택</a></dd>
+                        <dd><a href="#">중고샵/바이백</a></dd>
+                        <dd><a href="#">제휴카드 안내</a></dd>
+                        <dd><a href="#">최저가격보상제도</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>빠르다</strong></dt>
+                        <dd><a href="#">총알배송</a></dd>
+                        <dd><a href="#">총알검색</a></dd>
+                        <dd><a href="#">매장 픽업 서비스</a></dd>
+                        <dd><a href="#">알림 신청 안내</a></dd>
+                        <dd><a href="#">모바일 서비스</a></dd>
+                        <dd><a href="#">간편결제 서비스</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>믿을 수 있다</strong></dt>
+                        <dd><a href="#">YES마니아</a></dd>
+                        <dd><a href="#">스타블로거</a></dd>
+                        <dd><a href="#">파워문화블로그</a></dd>
+                        <dd><a href="#">YES환전소</a></dd>
+                        <dd><a href="#">YES포인트충전소</a></dd>
+                        <dd><a href="#">YES상품권</a></dd>
+                    </dl>
+                </div>
+                <div class="notice">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li><em>.</em><a href="#">2월 신용카드 무이자할부 안내<span>&nbsp;2021-02-01</span></a></li>
+                        <li><em>.</em><a href="#">2월 상품권+쿠폰+결제+추천 혜택모음<span>&nbsp;2021-02-01</span></a></li>
+                        <li><em>.</em><a href="#">2월 누구나 1천원 상품권 증정<span>&nbsp;2021-02-01</span></a></li>
+                    </ul>
+                    <a class="more_detail" href="#">더보기 ></a>
+                </div>
+            </section>
+            <div class="serv_img"><a href="#"><img src="./img/serv_img.png" alt="어린이선물 캠페인"></a></div>
+        </main>
+        <footer>
+            <div class="footer_wrap">
+                <div class="footer_top">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">도서홍보안내</a></li>
+                        <li><a href="#">광고안내</a></li>
+                        <li><a href="#">제휴안내</a></li>
+                        <li><a href="#">복지제휴</a></li>
+                        <li><a href="#">중고매장</a></li>
+                    </ul>
+                </div>
+                <div class="footer_middle">
+                    <p class="logo"><img src="./img/footer_logo.png" alt="푸터 로고"></p>
+                    <p class="info">
+                        <dl class="cname">
+                            <dt><em class="ctit">예스이십사(주)</em></dt>
+                            <dd>
+                                <address>
+                                    서울시 영등포구 은행로 11, 5층~6층(여의도동,일신빌딩)<br />
+                                    대표 : 김석환   개인정보보호책임자 : 권민석 yes24help@yes24.com<br />
+                                    사업자등록번호 : 229-81-37000   통신판매업신고 : 제 2005-02682호 <span class="cinfo"><a href="#">사업자 정보확인 > </a></span><br />
+                                    호스팅 서비스사업자 : 예스이십사(주)<br />
+                                    Copyright ⓒ YES24 Corp. All Rights Reserved.
+                                </address>
+                            </dd>
+                        </dl>
+                        <dl class="center">
+                            <dt>고객만족센터 T.<span class="cen_num">1544-3800</span></dt>
+                            <dd>
+                                <ul>
+                                    <li><span class="cen_info">중고샵 문의</span>1566-4295</li>
+                                    <li><span>영화예매 문의</span>1544-7758</li>
+                                    <li><span>공연예매 문의</span>1544-6399</li>
+                                </ul>
+                            </dd>
+                            <dd>
+                                <a href="#">1:1 문의하기 ></a>
+                                <a href="#">자주 묻는 질문 ></a>
+                                <a href="#">상담시간 안내 ></a>
+                            </dd>
+                        </dl>
+                    </p>
+                </div>       
+                <div class="footer_bottom"><img src="./img/footer_glory.gif" alt="브랜드 평판"></div>
+            </div>      
+        </footer>
+    </div>
+    
+</body>
+</html>
