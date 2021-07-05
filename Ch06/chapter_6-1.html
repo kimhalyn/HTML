@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter_6</title>
+    <!-- 뷰포트 meta 태그 속성 (모바일)
+    - width: 화면 너비 (width=240으로 강제 지정하거나 width=device-width로 화면에 맞게 자동조절)
+    - height: 화면 너비 (height=800으로 강제 지정하거나 height=device-height로 화면에 맞게 자동조절)
+    - initial-scale: 초기 확대 비율 (initial-scale=1.0 -> 100%)
+    - user-scalable: 확대 및 축소 가능 여부 (YES, NO로 지정하며 'NO'하면 화면 확대 불가함)
+    - minimum-scale: 최소 축소 비율 (minimum-scale=1.0)
+    - maximum-scale: 최대 축소 비율 (maximum-scale=2.0)
+    -->
+    <style>
+        /* 초기화 */
+        body {font-family: 'Helvetica', 'sans-serif';}
+        li {list-style: none;}
+        a {text-decoration: none;}
+
+        /* 헤더 */ 
+        #main_header {
+            /* 배경 지정 */
+            height: 45px;
+            background: url(./img/header_background.png);
+
+            /* 자손 위치 지정 */
+            position: relative;
+            text-align: center;
+            line-height: 45px; /* height와 line-height를 같게하면 수직정렬됨 */
+        }
+        #main_header > h1 {color: white;}
+        #main_header > a, label {
+            display: block; /* a태그에 display:block하면 공간 전체 클릭 가능 */
+            height: 32px;
+            position: absolute;
+        }
+        #main_header > a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+        }
+        #main_header > label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+        }
+        /* 스트라이프 이미지 만들기
+        - 여러 개의 이미지를 하나로 뭉쳐놓은 것
+        - 스트라이프 이미지 만들 수 있는 홈페이지 www.toptal.com/developers/css/sprite-generator/
+        */ 
+        #main_header > a.left {
+            background: url(./img/sprites.png);
+            background-position: 0px 0px; /* 배경 이미지 위치 설정 */
+            text-indent: -99999px;  /* text-indent -> 글자 들여쓰기(양수)와 내어쓰기(음수) */
+        }
+        #main_header > label.right {
+            background: url(./img/sprites.png);
+            background-position: -62px 0px;
+            text-indent: -99999px; /* 태그 내부에 있는 글자를 보이지 않게 하기 위해서, 터무니 없는 값을 입력하여 화면밖으로 밀어버리는 코드 */
+        }
+
+        /* 토글 구현 */ 
+        #toggle {display: none;}
+        #toggle + #wrap > #toggle_gnb_wrap {display: none;}
+        #toggle:checked + #wrap > #toggle_gnb_wrap {display: block;}
+     
+        /* 레이아웃 구성 */ 
+        #toggle_gnb_wrap {
+            background: #363636;
+            padding: 15px;
+        }
+        #toggle_gnb {
+            background: #ffffff;
+            padding: 5px;
+        }
+
+        /* 토글 목록 */ 
+        #toggle_gnb > ul {overflow: hidden;}
+        #toggle_gnb > ul > li {width: 80px; float:left;}
+
+        /* 네비게이션(1) */ 
+        #top_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #b42111;
+        }
+        #top_gnb div > a {
+            float: left;
+            width: 25%;
+            height: 35px;
+            line-height: 35px; 
+            text-align: center;
+            color: white;
+        }
+
+        /* 네비게이션(2) */ 
+        #bottom_gnb {
+            display: table; /* table태그와 같은 레이아웃을 가짐 -> 내부 div태그에 width속성 사용할 필요없음 */
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        #bottom_gnb > div {
+            display: table-cell; /* td와 같은 레이아웃을 가짐 */
+            position: relative;
+        }
+        #bottom_gnb > div > a {
+            display: block; /* 딱 a태그 글자만 클릭하지 않고 그 부근을 클릭하면 링크 걸리게 해줌(a크기 태그 확장) */
+            height: 35px;
+            line-height: 35px; /* 수직으로 중앙정렬할 때, height와 line-height를 같게 함 */
+            text-align: center;
+        }
+        #bottom_gnb > div >a::after { /* :: -> 가상요소 */
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -10px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+      
+        /* 본문 구성 */ 
+        #section_header {padding: 30px;}
+        #section_article {padding: 20px;}
+        
+        /* 푸터 구성 */ 
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="toggle" type="checkbox">
+    <div id="wrap"> <!-- 일반적으로 가장 외곽에 만드는 div태그를 wrap이라고 함 -->
+        <header id="main_header">
+            <a class="left" href="#">Main</a>
+            <h1>Mobile</h1>
+            <label class="right" for="toggle">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>Lorem ipsum</h1>
+                <time>2021-02-07 - Birthday</time>
+            </header>
+            <article id="section_article">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>               
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>                
+            </article>
+        </section>
+        <footer id="main_footer">
+            <h3>HTML + CSS3 Basic</h3>
+            <address>Website Layout Basic</address>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ellipsis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ellipsis {
+            width: 300px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            white-space: nowrap;  /* 공백 1개로 인식, 줄바꿈 없음 */
+            overflow: hidden; /* 넘치는 부분 숨김 */
+            text-overflow: ellipsis; /* 줄임표(...) */ 
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="background">
+        <h1>Full screen</h1>
+    </div>
+    <div class="ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum veniam, est officia aperiam nesciunt pariatur, maiores iste autem id ab libero nemo quas neque cupiditate ullam facilis voluptatem eveniet tempora!</div>
+</body>
+</html>
