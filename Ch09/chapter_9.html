@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transition Basic</title>
+    <style>
+         .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /*  Transition: 시간의 흐름을 가지고 일어나는 변형
+                - transition-duration: 2s -> 2초에 걸쳐 변형 
+                - transition-delay: 3s -> 3초 후 변형 시작
+                - transition-timing-function: 변형 속도 조절 (linear, ease, ease-in, ease-out, ease-in-out)
+                - transition-property: 나머지와 함께 조합해서 사용
+                                        width, background-color, border-radius; 하고,
+                                        transition-duraton: 2s, 5s, 10s;,하고
+                                        transition-delay: 0s, 2s, 5s; 지정하면 각각 실행
+            */
+            transition: width 2s ease 0s, /* 너비를 2초 동안, ease로 0초 후에 변형 */
+                        background-color 2s ease 2s, /* 배경색을 2초 동안, ease로 2초 후에 변형 */
+                        border-radius 2s ease 4s; /* 배경 둘레 모양을 2초 동안, ease로 4초 후에 변형 */
+        }   
+
+        /*
+        .box:nth-child(1) {transition-timing-function: linear;} 동일한 속도로 진행
+        .box:nth-child(2) {transition-timing-function: ease;} 천천히 -> 빠르게 -> 천천히
+        .box:nth-child(3) {transition-timing-function: ease-in;} 천천히 시작
+        .box:nth-child(4) {transition-timing-function: ease-out;} 천천히 끝남
+        .box:nth-child(5) {transition-timing-function: ease-in-out;} 천천히 시작되어 천천히 끝남
+        */
+        .wrap:hover > .box {
+            width: 500px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        
+        /*.box:hover {
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+            opacity: 0.2;
+            border-radius: 30px;
+        }    
+        .box:active {background-color: red;}  /* 클릭하면 색상 변함 */
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
